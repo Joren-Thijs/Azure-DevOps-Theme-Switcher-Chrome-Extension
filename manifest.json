@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Azure DevOps Theme Switcher",
+  "version": "1.0",
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://dev.azure.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["https://dev.azure.com/*"]
+}
